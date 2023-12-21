@@ -73,8 +73,10 @@ body {
 .position h3 {
    margin-top: 10px;
    color: black;
-   font-size: 15px;
+   /* font-size: 18px; */
    margin-left: 20%;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 100;
 }
 
 @media screen and (max-width: 600px) {
@@ -249,7 +251,7 @@ p {
 }
 
 .myButton {
-   box-shadow: 0px 10px 14px -7px #276873;
+   box-shadow: 0px 10px 14px -7px #D67629;
    background-color: #D67629;
    border-radius: 10px;
    display: inline block;
@@ -267,7 +269,7 @@ p {
 }
 
 .myButton:hover {
-   background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+   background: linear-gradient(to bottom, #D67629 5%, #D67629 100%);
    background-color: #D67629;
 }
 
@@ -300,5 +302,37 @@ p {
    .myButton {
       width: 100%; 
       margin-left: 3.8rem; 
+   }
+}
+
+@media screen and (max-width: 360px) {
+   .circular-image-box {
+      width: 120px;
+      height: 120px;
+      top: 85%; 
+      left: 25%; 
+      transform: translate(-50%, -50%); 
+   }
+
+   .name {
+      top: 80%; 
+      left: 70%; 
+      transform: translate(-50%, -50%);
+   }
+
+   .name h1 {
+      font-size: 20px;
+      margin-top: 10px;
+   }
+
+   .position h3 {
+      font-size: 14px;
+      margin-left: 8rem;
+   }
+
+   .myButton {
+      width: 100%; 
+      margin-left: 2.6rem;
+      box-shadow: 0px 1px 1px -1px #D67629;
    }
 }
