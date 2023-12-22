@@ -87,3 +87,6 @@ document.getElementById('downloadButton').addEventListener('click', function() {
 
     downloadFile(vCardFileUrl, filename);
 });
+
+
+
