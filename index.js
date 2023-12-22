@@ -98,21 +98,40 @@ var originalPosition = {
 
 function enlargeImg() {
     nameElement.classList.add("hidden");
-    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    var imageWidth = img.offsetWidth;
-    var leftMargin = (windowWidth - imageWidth) / 7.8;
-    img.style.left = leftMargin + "px";
 
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var position;
+
+    if (windowWidth <= 768) { 
+        position = {
+            top: "60%",  
+            left: "30%"  
+        };
+    } else {
+       
+        position = {
+            top: "50%",  
+            left: "35%"  
+        };
+    }
+
+    img.style.top = position.top;
+    img.style.left = position.left;
 
     img.style.transform = "scale(2)";
     img.style.transition = "transform 0.45s ease";
+
     document.addEventListener("click", resetImgOutside);
 }
+
+
 
 function resetImg() {
     nameElement.classList.remove("hidden");
     img.style.transform = "scale(1)";
     img.style.transition = "transform 0.45s ease";
+
+   
     img.style.top = originalPosition.top;
     img.style.left = originalPosition.left;
 

@@ -335,9 +335,9 @@ p {
    margin: 20px auto 0;
 }
 
-.icon-container1.outlined {
-   /* border: 2px dashed #D67629; */
-}
+/* .icon-container1.outlined {
+   border: 2px dashed #D67629;
+} */
 
 .icon-container1 i {
    color: #000000;
@@ -395,9 +395,9 @@ p {
    .circular-image-box {
       width: 120px;
       height: 120px;
-      top: 85%; 
-      left: 25%; 
-      transform: translate(-50%, -50%); 
+      /* top: 85%; 
+      left: 25%;  */
+      /* transform: translate(-50%, -50%);  */
    }
 
    .name {
