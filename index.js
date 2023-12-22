@@ -74,7 +74,7 @@ function updateDots(index) {
 
 document.getElementById('downloadButton').addEventListener('click', function() {
     var vCardFileUrl = 'https://vcf.fyi/5e955ac5';
-    var filename = 'Yonas_teklu.vcf'; // You can set any custom filename here
+    var filename = 'Yonas_teklu.vcf'; 
 
     function downloadFile(url, filename) {
         var link = document.createElement('a');
@@ -89,4 +89,38 @@ document.getElementById('downloadButton').addEventListener('click', function() {
 });
 
 
+var img = document.getElementById("imagee");
+var nameElement = document.querySelector(".name");
+var originalPosition = {
+    top: "65%", 
+   left: "10%"
+};
 
+function enlargeImg() {
+    nameElement.classList.add("hidden");
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var imageWidth = img.offsetWidth;
+    var leftMargin = (windowWidth - imageWidth) / 7.8;
+    img.style.left = leftMargin + "px";
+
+
+    img.style.transform = "scale(2)";
+    img.style.transition = "transform 0.45s ease";
+    document.addEventListener("click", resetImgOutside);
+}
+
+function resetImg() {
+    nameElement.classList.remove("hidden");
+    img.style.transform = "scale(1)";
+    img.style.transition = "transform 0.45s ease";
+    img.style.top = originalPosition.top;
+    img.style.left = originalPosition.left;
+
+    document.removeEventListener("click", resetImgOutside);
+}
+
+function resetImgOutside(event) {
+    if (!img.contains(event.target)) {
+        resetImg();
+    }
+}
