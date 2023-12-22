@@ -74,10 +74,16 @@ function updateDots(index) {
 
 document.getElementById('downloadButton').addEventListener('click', function() {
     var vCardFileUrl = 'https://vcf.fyi/5e955ac5';
-    var link = document.createElement('a');
-    link.href = vCardFileUrl;
-    link.download = 'Yonas Teklu.vcf';
-    document.body.appendChild(link);
-     link.click();
-    document.body.removeChild(link);
+    var filename = 'Yonas_teklu.vcf'; // You can set any custom filename here
+
+    function downloadFile(url, filename) {
+        var link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
+    downloadFile(vCardFileUrl, filename);
 });
