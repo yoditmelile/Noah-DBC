@@ -41,3 +41,28 @@ function updateDots(index) {
         dot.classList.toggle('active', i === index);
     });
 }
+
+document.getElementById('downloadContact').addEventListener('click', function() {
+    
+    var imageUrl = 'https://drive.google.com/file/d/1P8QmVzzTLYeTjpoWGSYAz7LhqAJ2N8fW/view?usp=sharing ';
+  
+    
+    var vCardData = 'BEGIN:VCARD\nVERSION:3.0\nFN:Yonas Teklu\nTEL:0913118633\nPHOTO;VALUE=URI:' + imageUrl + '\nEND:VCARD';
+  
+  
+    var blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
+  
+
+    var a = document.createElement('a');
+  
+   
+    a.download = 'contact.vcf';
+    a.href = window.URL.createObjectURL(blob);
+  
+   
+    document.body.appendChild(a);
+    a.click();
+  
+   
+    document.body.removeChild(a);
+  });

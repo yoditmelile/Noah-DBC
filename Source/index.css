@@ -118,8 +118,9 @@ body {
 .slider-container {
    max-width: 500px;
    height: 300px;
-   margin: 50px auto;
+   margin: 100px auto;
    overflow: hidden;
+   margin-bottom: 0;
 }
 
 .slider {
@@ -178,16 +179,7 @@ img {
 .slider-dot.active {
    background-color: #D67629;
 }
-@media screen and (max-width: 600px) {
-   .slider-container {
-      max-width: 100%; 
-      margin: 10px;
-   }
 
-   .slide {
-      min-width: 100%; 
-   }
-}
 
 .about-me {
    max-width: 500px;
@@ -210,6 +202,33 @@ p {
    font-family: 'Poppins', sans-serif;
    font-weight: 200;
 }
+
+.buttons{
+   margin-top: 2.5rem;
+}
+.myButton {
+   box-shadow: 0px 10px 14px -7px #D67629;
+   background-color: #D67629;
+   border-radius: 10px;
+   display: inline block;
+   cursor: pointer;
+   color: #ffffff;
+   font-family: Arial;
+   font-size: 15px;
+   font-weight: bold;
+   width: 150px;
+   padding: 15px 30px;
+   text-decoration: none;
+   text-shadow: 0px 1px 0px #D67629;
+   margin-top: 50rem;
+   margin-left: 6.3rem;
+}
+
+.myButton:hover {
+   background: linear-gradient(to bottom, #D67629 5%, #D67629 100%);
+   background-color: #D67629;
+}
+
 
 .bottom {
    margin-top: 10%;
@@ -248,41 +267,41 @@ p {
 
 .contact {
    margin-left: 20;
+   margin-top: 0rem;
+   /* background-color: red; */
+  
+}
+.touch{
+   margin-bottom: 3rem;
+}
+.touch h1 {
+   color: #DF8C2A;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   margin-left: 5.5rem;
+   margin-top: 0;
+   
+}
+.media h1 {
+   color: #DF8C2A;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   margin-left: 5.5rem;
+   /* margin-top: 100px; */
+   
 }
 
-.myButton {
-   box-shadow: 0px 10px 14px -7px #D67629;
-   background-color: #D67629;
-   border-radius: 10px;
-   display: inline block;
-   cursor: pointer;
-   color: #ffffff;
-   font-family: Arial;
-   font-size: 15px;
-   font-weight: bold;
-   width: 100px;
-   padding: 15px 15px;
-   text-decoration: none;
-   text-shadow: 0px 1px 0px #D67629;
-   margin-top: 10px;
-   margin-left: 7.8rem;
-}
-
-.myButton:hover {
-   background: linear-gradient(to bottom, #D67629 5%, #D67629 100%);
-   background-color: #D67629;
-}
 
 .icon-container {
    display: flex;
-   justify-content: center;
+   /* justify-content: center; */
    align-items: center;
    background-color: #ffffff;
    padding: 10px;
-   border: 2px solid #D67629;
+   border: 2px solid #515050;
    border-radius: 10px;
    width: 70%;
-   margin: 30px auto 0;
+   margin: 20px auto ;
 }
 
 .icon-container.outlined {
@@ -290,18 +309,72 @@ p {
 }
 
 .icon-container i {
-   color: #D67629;
-   margin-right: 10px;
+   color: #000000;
+   /* margin-right: 10px; */
+   margin-left: 30px;
 }
 
 .icon-container p {
    margin: 0;
-   color: #D67629;
+   color: #000000;
+   margin-left: 20px;
 }
+
+.icon-container1 {
+   display: flex;
+   /* justify-content: center; */
+   align-items: center;
+   background-color: #ffffff;
+   padding: 10px;
+   border: 2px solid #515050;
+   border-radius: 10px;
+   width: 70%;
+   margin: 20px auto 0;
+}
+
+.icon-container1.outlined {
+   /* border: 2px dashed #D67629; */
+}
+
+.icon-container1 i {
+   color: #000000;
+   /* margin-right: 10px; */
+   margin-left: 30px;
+}
+
+.icon-container1 a {
+   margin: 0;
+   color: #000000;
+   margin-left: 20px;
+   text-decoration: none;
+   cursor: pointer;
+}
+.icon-container1 p {
+   margin: 0;
+   color: #000000;
+   margin-left: 20px;
+}
+
 @media screen and (max-width: 600px) {
-   .myButton {
+   .slider-container {
+      max-width: 100%; 
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-top: 50px;
+   }
+
+   .slide {
+      min-width: 100%; 
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .buttons{
       width: 100%; 
-      margin-left: 3.8rem; 
+   }
+   .myButton {
+      /* width: 50%;  */
+      margin-left: 2.5rem; 
    }
 }
 
@@ -330,9 +403,9 @@ p {
       margin-left: 8rem;
    }
 
-   .myButton {
-      width: 100%; 
+   /* .myButton {
+      width: 50%; 
       margin-left: 2.6rem;
       box-shadow: 0px 1px 1px -1px #D67629;
-   }
+   } */
 }
