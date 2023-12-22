@@ -44,7 +44,7 @@ function updateDots(index) {
 
 document.getElementById('downloadContact').addEventListener('click', function() {
     
-    var imageUrl = 'https://drive.google.com/file/d/1P8QmVzzTLYeTjpoWGSYAz7LhqAJ2N8fW/view?usp=sharing ';
+    var imageUrl = 'https://imgur.com/RJXGA2z.jpeg';
   
     
     var vCardData = 'BEGIN:VCARD\nVERSION:3.0\nFN:Yonas Teklu\nTEL:0913118633\nPHOTO;VALUE=URI:' + imageUrl + '\nEND:VCARD';
