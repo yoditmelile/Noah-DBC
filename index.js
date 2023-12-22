@@ -44,7 +44,7 @@ function updateDots(index) {
 
 document.getElementById('downloadContact').addEventListener('click', function() {
     
-    var imageUrl = 'https://imgur.com/RJXGA2z.jpeg';
+    var imageUrl = 'https://www.iconnect.plus/mohamed/header.png';
   
     
     var vCardData = 'BEGIN:VCARD\nVERSION:3.0\nFN:Yonas Teklu\nTEL:0913118633\nPHOTO;VALUE=URI:' + imageUrl + '\nEND:VCARD';
