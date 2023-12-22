@@ -1,4 +1,6 @@
 let currentSlide = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
 function showSlide(index) {
     const slider = document.querySelector('.slider');
@@ -24,10 +26,37 @@ function prevSlide() {
     showSlide(currentSlide - 1);
 }
 
-// Automatic slide change (optional)
-setInterval(nextSlide, 5000); // Change slide every 5 seconds
+const sliderContainer = document.querySelector('.slider');
+
+sliderContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+});
+
+sliderContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const swipeThreshold = 50; 
+
+    const deltaX = touchEndX - touchStartX;
+
+    if (deltaX > swipeThreshold) {
+        prevSlide();
+    } else if (deltaX < -swipeThreshold) {
+        nextSlide();
+    }
+}
+
+sliderContainer.addEventListener('touchmove', (e) => {
+    e.preventDefault();
+});
+
+
+setInterval(nextSlide, 5000); 
+
 const dots = document.querySelectorAll('.slider-dot');
-const slides = document.querySelectorAll('.slide');
 
 dots.forEach((dot, index) => {
     dot.addEventListener('click', () => {
@@ -41,31 +70,6 @@ function updateDots(index) {
         dot.classList.toggle('active', i === index);
     });
 }
-
-// document.getElementById('downloadContact').addEventListener('click', function() {
-    
-//     var imageUrl = 'https://drive.google.com/file/d/1P8QmVzzTLYeTjpoWGSYAz7LhqAJ2N8fW/view?usp=sharing';
-  
-    
-//     var vCardData = 'BEGIN:VCARD\nVERSION:3.0\nFN:Yonas Teklu\nTEL:0913118633\nPHOTO;VALUE=URI:' + imageUrl + '\nEND:VCARD';
-  
-  
-//     var blob = new Blob([vCardData], { type: 'text/vcard;charset=utf-8' });
-  
-
-//     var a = document.createElement('a');
-  
-   
-//     a.download = 'contact.vcf';
-//     a.href = window.URL.createObjectURL(blob);
-  
-   
-//     document.body.appendChild(a);
-//     a.click();
-  
-   
-//     document.body.removeChild(a);
-//   });
 
 
 document.getElementById('downloadButton').addEventListener('click', function() {
