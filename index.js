@@ -54,7 +54,7 @@ sliderContainer.addEventListener('touchmove', (e) => {
 });
 
 
-setInterval(nextSlide, 5000); 
+// setInterval(nextSlide, 5000); 
 
 const dots = document.querySelectorAll('.slider-dot');
 
