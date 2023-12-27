@@ -73,7 +73,7 @@ function updateDots(index) {
 
 
 document.getElementById('downloadButton').addEventListener('click', function() {
-    var vCardFileUrl = 'https://vcf.fyi/5aa18949';
+    var vCardFileUrl = 'https://vcf.fyi/7a53cda3';
     var filename = 'Yonas_teklu.vcf'; 
 
     function downloadFile(url, filename) {
