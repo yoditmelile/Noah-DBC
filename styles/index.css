@@ -196,13 +196,20 @@ img {
    font-weight: 500;
 }
 
-p {
+.about-me p {
    color: #000000;
-   line-height: 1.6;
+   text-align: left;
+   justify-content:center;
    font-family: 'Poppins', sans-serif;
    font-weight: 200;
-}
 
+}
+about-mep1{
+ margin-top: 0rem;
+}
+about-mep2{
+   margin-top: -1rem;
+}
 .buttons{
    margin-top: 2.5rem;
    display: flex;
@@ -348,7 +355,7 @@ p {
 .icon-container1 i {
    color: #000000;
    /* margin-right: 10px; */
-   margin-left: 30px;
+   margin-left: 20px;
 }
 
 .icon-container1 a {
@@ -361,7 +368,7 @@ p {
 .icon-container1 p {
    margin: 0;
    color: #000000;
-   margin-left: 20px;
+   margin-left: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -419,7 +426,7 @@ p {
 
    .position h3 {
       font-size: 14px;
-      margin-left: 8rem;
+      margin-left: 9rem;
    }
 
    
